@@ -1,0 +1,4163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MHK SEA HS Schedule Lookup</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+input { width: 300px; padding: 10px; }
+</style>
+</head>
+<body>
+<h2>MHK SEA HS Schedule Lookup</h2>
+
+<input id="search" placeholder="Search student name..." oninput="searchStudent()" />
+
+<div id="result"></div>
+
+<script>
+const data = {
+  "nan": [
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": NaN,
+      "monday": NaN,
+      "tuesday": NaN,
+      "wednesday": NaN,
+      "thursday": NaN,
+      "friday": NaN
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Baez, Alex": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "friday": "Homeroom\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "thursday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "friday": "WIN\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Health\nGiannos\n104A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Health\nGiannos\n104A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Mack, Akaiah": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "friday": "Homeroom\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "thursday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "friday": "WIN\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Health\nGiannos\n104A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Health\nGiannos\n104A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Wornum, Makhi Zion": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "friday": "Homeroom\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "thursday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "friday": "WIN\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Health\nGiannos\n104A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Health\nGiannos\n104A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Livingston, Ta'Miyah": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "friday": "Homeroom\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "thursday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "friday": "WIN\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Health\nGiannos\n104A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Health\nGiannos\n104A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Silva, Diego": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Homeroom\nIsham/\nWright-McCarthy\n103",
+      "friday": "Homeroom\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "thursday": "WIN\nIsham/\nWright-McCarthy\n103",
+      "friday": "WIN\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Health\nGiannos\n104A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Health\nGiannos\n104A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Gaines, Adrian": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nConnolly\n108",
+      "tuesday": "Homeroom\nConnolly\n108",
+      "wednesday": "Homeroom\nConnolly\n108",
+      "thursday": "Homeroom\nConnolly\n108",
+      "friday": "Homeroom\nConnolly\n108"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nConnolly\n108",
+      "tuesday": "WIN\nConnolly\n108",
+      "wednesday": "WIN\nConnolly\n108",
+      "thursday": "WIN\nConnolly\n108",
+      "friday": "WIN\nConnolly\n108"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Raposo, Oscar": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nConnolly\n108",
+      "tuesday": "Homeroom\nConnolly\n108",
+      "wednesday": "Homeroom\nConnolly\n108",
+      "thursday": "Homeroom\nConnolly\n108",
+      "friday": "Homeroom\nConnolly\n108"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nConnolly\n108",
+      "tuesday": "WIN\nConnolly\n108",
+      "wednesday": "WIN\nConnolly\n108",
+      "thursday": "WIN\nConnolly\n108",
+      "friday": "WIN\nConnolly\n108"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Benjamin Rosado": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nConnolly\n108",
+      "tuesday": "Homeroom\nConnolly\n108",
+      "wednesday": "Homeroom\nConnolly\n108",
+      "thursday": "Homeroom\nConnolly\n108",
+      "friday": "Homeroom\nConnolly\n108"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nConnolly\n108",
+      "tuesday": "WIN\nConnolly\n108",
+      "wednesday": "WIN\nConnolly\n108",
+      "thursday": "WIN\nConnolly\n108",
+      "friday": "WIN\nConnolly\n108"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Biology\nTrofatter\n108",
+      "tuesday": "Biology\nTrofatter\n108",
+      "wednesday": "Biology\nTrofatter\n108",
+      "thursday": "Biology\nTrofatter\n108",
+      "friday": "Biology\nTrofatter\n108"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Marquez, Jennaida (Momo)": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nConnolly\n108",
+      "tuesday": "Homeroom\nConnolly\n108",
+      "wednesday": "Homeroom\nConnolly\n108",
+      "thursday": "Homeroom\nConnolly\n108",
+      "friday": "Homeroom\nConnolly\n108"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nConnolly\n108",
+      "tuesday": "WIN\nConnolly\n108",
+      "wednesday": "WIN\nConnolly\n108",
+      "thursday": "WIN\nConnolly\n108",
+      "friday": "WIN\nConnolly\n108"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Gonzales, Sebastian": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nConnolly\n108",
+      "tuesday": "Homeroom\nConnolly\n108",
+      "wednesday": "Homeroom\nConnolly\n108",
+      "thursday": "Homeroom\nConnolly\n108",
+      "friday": "Homeroom\nConnolly\n108"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 1\nGiannos\n104A",
+      "tuesday": "US History 1\nGiannos\n104A",
+      "wednesday": "US History 1\nGiannos\n104A",
+      "thursday": "US History 1\nGiannos\n104A",
+      "friday": "US History 1\nGiannos\n104A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "tuesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "wednesday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "thursday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103",
+      "friday": "Integrated Math 1\nIsham/\nWright-McCarthy\n103"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nConnolly\n108",
+      "tuesday": "WIN\nConnolly\n108",
+      "wednesday": "WIN\nConnolly\n108",
+      "thursday": "WIN\nConnolly\n108",
+      "friday": "WIN\nConnolly\n108"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Biology\nConnolly\n108",
+      "tuesday": "Biology\nConnolly\n108",
+      "wednesday": "Biology\nConnolly\n108",
+      "thursday": "Biology\nConnolly\n108",
+      "friday": "Biology\nConnolly\n108"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 9\nKunze/Busch\n106",
+      "tuesday": "English 9\nKunze/Busch\n106",
+      "wednesday": "English 9\nKunze/Busch\n106",
+      "thursday": "English 9\nKunze/Busch\n106",
+      "friday": "English 9\nKunze/Busch\n106"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Bailey Cannady, Kaleyal": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Vatel, Javari Jameil *": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Rodriguez, Adrian": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Milton, Jayden": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nPomerenke\n109",
+      "tuesday": "Homeroom\nPomerenke\n109",
+      "wednesday": "Homeroom\nPomerenke\n109",
+      "thursday": "Homeroom\nPomerenke\n109",
+      "friday": "Homeroom\nPomerenke\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nPomerenke\n109",
+      "tuesday": "WIN\nPomerenke\n109",
+      "wednesday": "WIN\nPomerenke\n109",
+      "thursday": "WIN\nPomerenke\n109",
+      "friday": "WIN\nPomerenke\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Rainey, Jaziah *": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Gordon, Journey Sanai *": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Charles, Jaden *": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nTrof/Pome\n109",
+      "tuesday": "Homeroom\nTrof/Pome\n109",
+      "wednesday": "Homeroom\nTrof/Pome\n109",
+      "thursday": "Homeroom\nTrof/Pome\n109",
+      "friday": "Homeroom\nTrof/Pome\n109"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Technology\nO'Leary\n009",
+      "wednesday": "Art\nHauben\n007-008",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nTrof/Pome\n109",
+      "tuesday": "WIN\nTrof/Pome\n109",
+      "wednesday": "WIN\nTrof/Pome\n109",
+      "thursday": "WIN\nTrof/Pome\n109",
+      "friday": "WIN\nTrof/Pome\n109"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Castellano Agunobi, Adanna": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nHupe\n105",
+      "tuesday": "Homeroom\nHupe\n105",
+      "wednesday": "Homeroom\nHupe\n105",
+      "thursday": "Homeroom\nHupe\n105",
+      "friday": "Homeroom\nHupe\n105"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nHupe\n105",
+      "tuesday": "WIN\nHupe\n105",
+      "wednesday": "WIN\nHupe\n105",
+      "thursday": "WIN\nHupe\n105",
+      "friday": "WIN\nHupe\n105"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Cosmetology\nSantana\n107A",
+      "tuesday": "Cosmetology\nSantana\n107A",
+      "wednesday": "Cosmetology\nSantana\n107A",
+      "thursday": "Cosmetology\nSantana\n107A",
+      "friday": "Cosmetology\nSantana\n107A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Physics\nTroffater\n103",
+      "tuesday": "Physics\nTroffater\n103",
+      "wednesday": "Physics\nTroffater\n103",
+      "thursday": "Physics\nTroffater\n103",
+      "friday": "Physics\nTroffater\n103"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Walker, Leon": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nHupe\n105",
+      "tuesday": "Homeroom\nHupe\n105",
+      "wednesday": "Homeroom\nHupe\n105",
+      "thursday": "Homeroom\nHupe\n105",
+      "friday": "Homeroom\nHupe\n105"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nHupe\n105",
+      "tuesday": "WIN\nHupe\n105",
+      "wednesday": "WIN\nHupe\n105",
+      "thursday": "WIN\nHupe\n105",
+      "friday": "WIN\nHupe\n105"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Physics\nTroffater\n103",
+      "tuesday": "Physics\nTroffater\n103",
+      "wednesday": "Physics\nTroffater\n103",
+      "thursday": "Physics\nTroffater\n103",
+      "friday": "Physics\nTroffater\n103"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Maloney, Gabrielle": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nHupe\n105",
+      "tuesday": "Homeroom\nHupe\n105",
+      "wednesday": "Homeroom\nHupe\n105",
+      "thursday": "Homeroom\nHupe\n105",
+      "friday": "Homeroom\nHupe\n105"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nHupe\n105",
+      "tuesday": "WIN\nHupe\n105",
+      "wednesday": "WIN\nHupe\n105",
+      "thursday": "WIN\nHupe\n105",
+      "friday": "WIN\nHupe\n105"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Environ. Sci.\nPomerenke\n109",
+      "tuesday": "Environ. Sci.\nPomerenke\n109",
+      "wednesday": "Environ. Sci.\nPomerenke\n109",
+      "thursday": "Environ. Sci.\nPomerenke\n109",
+      "friday": "Environ. Sci.\nPomerenke\n109"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Gonzalez Rowell, Aaliyah": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBeauvais\n106A",
+      "tuesday": "Homeroom\nBeauvais\n106A",
+      "wednesday": "Homeroom\nBeauvais\n106A",
+      "thursday": "Homeroom\nBeauvais\n106A",
+      "friday": "Homeroom\nBeauvais\n106A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBeauvais\n106A",
+      "tuesday": "WIN\nBeauvais\n106A",
+      "wednesday": "WIN\nBeauvais\n106A",
+      "thursday": "WIN\nBeauvais\n106A",
+      "friday": "WIN\nBeauvais\n106A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Environ. Sci.\nPomerenke\n109",
+      "tuesday": "Environ. Sci.\nPomerenke\n109",
+      "wednesday": "Environ. Sci.\nPomerenke\n109",
+      "thursday": "Environ. Sci.\nPomerenke\n109",
+      "friday": "Environ. Sci.\nPomerenke\n109"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Pires, Fabio Santos": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBeauvais\n106A",
+      "tuesday": "Homeroom\nBeauvais\n106A",
+      "wednesday": "Homeroom\nBeauvais\n106A",
+      "thursday": "Homeroom\nBeauvais\n106A",
+      "friday": "Homeroom\nBeauvais\n106A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "ESL 3\nHickey\n001B",
+      "wednesday": "ESL 3\nHickey\n001B",
+      "thursday": "ESL 3\nHickey\n001B",
+      "friday": "ESL 3\nHickey\n001B"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBeauvais\n106A",
+      "tuesday": "WIN\nBeauvais\n106A",
+      "wednesday": "WIN\nBeauvais\n106A",
+      "thursday": "WIN\nBeauvais\n106A",
+      "friday": "WIN\nBeauvais\n106A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "tuesday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "wednesday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "thursday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "friday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Joseph, Davon Cameron": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBeauvais\n106A",
+      "tuesday": "Homeroom\nBeauvais\n106A",
+      "wednesday": "Homeroom\nBeauvais\n106A",
+      "thursday": "Homeroom\nBeauvais\n106A",
+      "friday": "Homeroom\nBeauvais\n106A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBeauvais\n106A",
+      "tuesday": "WIN\nBeauvais\n106A",
+      "wednesday": "WIN\nBeauvais\n106A",
+      "thursday": "WIN\nBeauvais\n106A",
+      "friday": "WIN\nBeauvais\n106A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Anat & Phys\nConnolly\n108",
+      "tuesday": "Anat & Phys\nConnolly\n108",
+      "wednesday": "Anat & Phys\nConnolly\n108",
+      "thursday": "Anat & Phys\nConnolly\n108",
+      "friday": "Anat & Phys\nConnolly\n108"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Semidey, Christian Joseph": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBeauvais\n106A",
+      "tuesday": "Homeroom\nBeauvais\n106A",
+      "wednesday": "Homeroom\nBeauvais\n106A",
+      "thursday": "Homeroom\nBeauvais\n106A",
+      "friday": "Homeroom\nBeauvais\n106A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBeauvais\n106A",
+      "tuesday": "WIN\nBeauvais\n106A",
+      "wednesday": "WIN\nBeauvais\n106A",
+      "thursday": "WIN\nBeauvais\n106A",
+      "friday": "WIN\nBeauvais\n106A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Physics\nTroffater\n103",
+      "tuesday": "Physics\nTroffater\n103",
+      "wednesday": "Physics\nTroffater\n103",
+      "thursday": "Physics\nTroffater\n103",
+      "friday": "Physics\nTroffater\n103"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Bell, Emily Marie": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "African Amer \nHistory\nScott   104",
+      "tuesday": "African Amer \nHistory\nScott   104",
+      "wednesday": "African Amer \nHistory\nScott   104",
+      "thursday": "African Amer \nHistory\nScott   104",
+      "friday": "African Amer \nHistory\nScott   104"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Environ. Sci.\nPomerenke\n109",
+      "tuesday": "Environ. Sci.\nPomerenke\n109",
+      "wednesday": "Environ. Sci.\nPomerenke\n109",
+      "thursday": "Environ. Sci.\nPomerenke\n109",
+      "friday": "Environ. Sci.\nPomerenke\n109"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Cole, Deniva Jyi": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Cosmetology\nSantana\n107A",
+      "tuesday": "Cosmetology\nSantana\n107A",
+      "wednesday": "Cosmetology\nSantana\n107A",
+      "thursday": "Cosmetology\nSantana\n107A",
+      "friday": "Cosmetology\nSantana\n107A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Economics\nBeauvais\n106A",
+      "tuesday": "Economics\nBeauvais\n106A",
+      "wednesday": "Economics\nBeauvais\n106A",
+      "thursday": "Economics\nBeauvais\n106A",
+      "friday": "Economics\nBeauvais\n106A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Anat & Phys\nConnolly\n108",
+      "tuesday": "Anat & Phys\nConnolly\n108",
+      "wednesday": "Anat & Phys\nConnolly\n108",
+      "thursday": "Anat & Phys\nConnolly\n108",
+      "friday": "Anat & Phys\nConnolly\n108"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Gonzalez, Isaiah Majahsti": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Strategies \nfor Success\nTrofatter\n109",
+      "tuesday": "Entrepreneurship\nPomerenke\n109",
+      "wednesday": "Entrepreneurship\nPomerenke\n109",
+      "thursday": "Entrepreneurship\nPomerenke\n109",
+      "friday": "Strategies \nfor Success\nTrofatter\n109"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "African Amer \nHistory\nScott   104",
+      "tuesday": "African Amer \nHistory\nScott   104",
+      "wednesday": "African Amer \nHistory\nScott   104",
+      "thursday": "African Amer \nHistory\nScott   104",
+      "friday": "African Amer \nHistory\nScott   104"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Anat & Phys\nConnolly\n108",
+      "tuesday": "Anat & Phys\nConnolly\n108",
+      "wednesday": "Anat & Phys\nConnolly\n108",
+      "thursday": "Anat & Phys\nConnolly\n108",
+      "friday": "Anat & Phys\nConnolly\n108"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Pitts, Liliana Marie": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "World History 2\nBeauvais\n106A",
+      "tuesday": "World History 2\nBeauvais\n106A",
+      "wednesday": "World History 2\nBeauvais\n106A",
+      "thursday": "World History 2\nBeauvais\n106A",
+      "friday": "World History 2\nBeauvais\n106A"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Economics\nBeauvais\n106A",
+      "tuesday": "Economics\nBeauvais\n106A",
+      "wednesday": "Economics\nBeauvais\n106A",
+      "thursday": "Economics\nBeauvais\n106A",
+      "friday": "Economics\nBeauvais\n106A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Environ. Sci.\nPomerenke\n109",
+      "tuesday": "Environ. Sci.\nPomerenke\n109",
+      "wednesday": "Environ. Sci.\nPomerenke\n109",
+      "thursday": "Environ. Sci.\nPomerenke\n109",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Alicea, Esmeralda Noemi": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nHupe\n105",
+      "tuesday": "Integrated Math 3\nHupe\n105",
+      "wednesday": "Integrated Math 3\nHupe\n105",
+      "thursday": "Integrated Math 3\nHupe\n105",
+      "friday": "Integrated Math 3\nHupe\n105"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nJoseph\n105A",
+      "tuesday": "English 11\nJoseph\n105A",
+      "wednesday": "English 11\nJoseph\n105A",
+      "thursday": "English 11\nJoseph\n105A",
+      "friday": "English 11\nJoseph\n105A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "tuesday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "wednesday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "thursday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P",
+      "friday": "Connolly/\nPomerenke\n108\nTBD - Physics, ES, A+P"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Dubose, Josia James": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Strategies \nfor Success\nTrofatter\n109",
+      "tuesday": "Entrepreneurship\nPomerenke\n109",
+      "wednesday": "Entrepreneurship\nPomerenke\n109",
+      "thursday": "Entrepreneurship\nPomerenke\n109",
+      "friday": "Strategies \nfor Success\nTrofatter\n109"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "African Amer \nHistory\nScott   104",
+      "tuesday": "African Amer \nHistory\nScott   104",
+      "wednesday": "African Amer \nHistory\nScott   104",
+      "thursday": "African Amer \nHistory\nScott   104",
+      "friday": "African Amer \nHistory\nScott   104"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Environ. Sci.\nPomerenke\n109",
+      "tuesday": "Environ. Sci.\nPomerenke\n109",
+      "wednesday": "Environ. Sci.\nPomerenke\n109",
+      "thursday": "Environ. Sci.\nPomerenke\n109",
+      "friday": "Environ. Sci.\nPomerenke\n109"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Perez, Lenin, Jr": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Strategies \nfor Success\nTrofatter\n109",
+      "tuesday": "Entrepreneurship\nPomerenke\n109",
+      "wednesday": "Entrepreneurship\nPomerenke\n109",
+      "thursday": "Entrepreneurship\nPomerenke\n109",
+      "friday": "Strategies \nfor Success\nTrofatter\n109"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "African Amer \nHistory\nScott   104",
+      "tuesday": "African Amer \nHistory\nScott   104",
+      "wednesday": "African Amer \nHistory\nScott   104",
+      "thursday": "African Amer \nHistory\nScott   104",
+      "friday": "African Amer \nHistory\nScott   104"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Anat & Phys\nConnolly\n108",
+      "tuesday": "Anat & Phys\nConnolly\n108",
+      "wednesday": "Anat & Phys\nConnolly\n108",
+      "thursday": "Anat & Phys\nConnolly\n108",
+      "friday": "Anat & Phys\nConnolly\n108"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Rankins, Kaleel Lamaree": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nJoseph\n105A",
+      "tuesday": "Homeroom\nJoseph\n105A",
+      "wednesday": "Homeroom\nJoseph\n105A",
+      "thursday": "Homeroom\nJoseph\n105A",
+      "friday": "Homeroom\nJoseph\n105A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Strategies \nfor Success\nTrofatter\n109",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "English 12\nJoseph\n105A",
+      "tuesday": "English 12\nJoseph\n105A",
+      "wednesday": "English 12\nJoseph\n105A",
+      "thursday": "English 12\nJoseph\n105A",
+      "friday": "English 12\nJoseph\n105A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nJoseph\n105A",
+      "tuesday": "WIN\nJoseph\n105A",
+      "wednesday": "WIN\nJoseph\n105A",
+      "thursday": "WIN\nJoseph\n105A",
+      "friday": "WIN\nJoseph\n105A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Strategies \nfor Success\nTrofatter\n109",
+      "tuesday": "Entrepreneurship\nPomerenke\n109",
+      "wednesday": "Entrepreneurship\nPomerenke\n109",
+      "thursday": "Entrepreneurship\nPomerenke\n109",
+      "friday": "Strategies \nfor Success\nTrofatter\n109"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "PreCalculus\nHupe\n105",
+      "tuesday": "PreCalculus\nHupe\n105",
+      "wednesday": "PreCalculus\nHupe\n105",
+      "thursday": "PreCalculus\nHupe\n105",
+      "friday": "PreCalculus\nHupe\n105"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "African Amer \nHistory\nScott   104",
+      "tuesday": "African Amer \nHistory\nScott   104",
+      "wednesday": "African Amer \nHistory\nScott   104",
+      "thursday": "African Amer \nHistory\nScott   104",
+      "friday": "African Amer \nHistory\nScott   104"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Anat & Phys\nConnolly\n108",
+      "tuesday": "Anat & Phys\nConnolly\n108",
+      "wednesday": "Anat & Phys\nConnolly\n108",
+      "thursday": "Anat & Phys\nConnolly\n108",
+      "friday": "Anat & Phys\nConnolly\n108"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Califano, Justin": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 2\nBurrell\n102",
+      "tuesday": "US History 2\nBurrell\n102",
+      "wednesday": "US History 2\nBurrell\n102",
+      "thursday": "US History 2\nBurrell\n102",
+      "friday": "US History 2\nBurrell\n102"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Integr Math 1\nChristopher\n102",
+      "tuesday": "Integr Math 1\nChristopher\n102",
+      "wednesday": "Integr Math 1\nChristopher\n102",
+      "thursday": "Integr Math 1\nChristopher\n102",
+      "friday": "Integr Math 1\nChristopher\n102"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "English 9/10\nBurrell\n102",
+      "tuesday": "English 9/10\nBurrell\n102",
+      "wednesday": "English 9/10\nBurrell\n102",
+      "thursday": "English 9/10\nBurrell\n102",
+      "friday": "English 9/10\nBurrell\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Health\nGiannos\n104A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Health\nGiannos\n104A",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Fernandez, Sa Nando (Nick)": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 2\nBurrell\n102",
+      "tuesday": "US History 2\nBurrell\n102",
+      "wednesday": "US History 2\nBurrell\n102",
+      "thursday": "US History 2\nBurrell\n102",
+      "friday": "US History 2\nBurrell\n102"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "English 9/10\nBurrell\n102",
+      "tuesday": "English 9/10\nBurrell\n102",
+      "wednesday": "English 9/10\nBurrell\n102",
+      "thursday": "English 9/10\nBurrell\n102",
+      "friday": "English 9/10\nBurrell\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integr Math 2\nChristopher\n102",
+      "tuesday": "Integr Math 2\nChristopher\n102",
+      "wednesday": "Integr Math 2\nChristopher\n102",
+      "thursday": "Integr Math 2\nChristopher\n102",
+      "friday": "Integr Math 2\nChristopher\n102"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Harden, Ziondre": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 2\nBurrell\n102",
+      "tuesday": "US History 2\nBurrell\n102",
+      "wednesday": "US History 2\nBurrell\n102",
+      "thursday": "US History 2\nBurrell\n102",
+      "friday": "US History 2\nBurrell\n102"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "English 9/10\nBurrell\n102",
+      "tuesday": "English 9/10\nBurrell\n102",
+      "wednesday": "English 9/10\nBurrell\n102",
+      "thursday": "English 9/10\nBurrell\n102",
+      "friday": "English 9/10\nBurrell\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integr Math 2\nChristopher\n102",
+      "tuesday": "Integr Math 2\nChristopher\n102",
+      "wednesday": "Integr Math 2\nChristopher\n102",
+      "thursday": "Integr Math 2\nChristopher\n102",
+      "friday": "Integr Math 2\nChristopher\n102"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Rogers, Mya": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "US History 2\nBurrell\n102",
+      "tuesday": "US History 2\nBurrell\n102",
+      "wednesday": "US History 2\nBurrell\n102",
+      "thursday": "US History 2\nBurrell\n102",
+      "friday": "US History 2\nBurrell\n102"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "English 9/10\nBurrell\n102",
+      "tuesday": "English 9/10\nBurrell\n102",
+      "wednesday": "English 9/10\nBurrell\n102",
+      "thursday": "English 9/10\nBurrell\n102",
+      "friday": "English 9/10\nBurrell\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Integr Math 2\nChristopher\n102",
+      "tuesday": "Integr Math 2\nChristopher\n102",
+      "wednesday": "Integr Math 2\nChristopher\n102",
+      "thursday": "Integr Math 2\nChristopher\n102",
+      "friday": "Integr Math 2\nChristopher\n102"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Register, Kamari": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "PE\nM. Jones\nGym",
+      "tuesday": "Art\nHauben\n007-008",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "PE\nM. Jones\nGym",
+      "friday": "Art\nHauben\n007-008"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nChristopher\n102",
+      "tuesday": "Integrated Math 3\nChristopher\n102",
+      "wednesday": "Integrated Math 3\nChristopher\n102",
+      "thursday": "Integrated Math 3\nChristopher\n102",
+      "friday": "Integrated Math 3\nChristopher\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nBurrell\n102",
+      "tuesday": "English 11\nBurrell\n102",
+      "wednesday": "English 11\nBurrell\n102",
+      "thursday": "English 11\nBurrell\n102",
+      "friday": "English 11\nBurrell\n102"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "World History\nBurrell\n102",
+      "tuesday": "World History\nBurrell\n102",
+      "wednesday": "World History\nBurrell\n102",
+      "thursday": "World History\nBurrell\n102",
+      "friday": "World History\nBurrell\n102"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Wilson, Kamiya": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBurrell/Christopher\n102",
+      "tuesday": "Homeroom\nBurrell/Christopher\n102",
+      "wednesday": "Homeroom\nBurrell/Christopher\n102",
+      "thursday": "Homeroom\nBurrell/Christopher\n102",
+      "friday": "Homeroom\nBurrell/Christopher\n102"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "Criminology\nBeauvais\n106A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "PE\nM. Jones\nGym"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Criminology\nBeauvais\n106A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Spanish 1\nSantiago\n001A",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBurr/Chri\n102",
+      "tuesday": "WIN\nBurr/Chri\n102",
+      "wednesday": "WIN\nBurr/Chri\n102",
+      "thursday": "WIN\nBurr/Chri\n102",
+      "friday": "WIN\nBurr/Chri\n102"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "Integrated Math 3\nChristopher\n102",
+      "tuesday": "Integrated Math 3\nChristopher\n102",
+      "wednesday": "Integrated Math 3\nChristopher\n102",
+      "thursday": "Integrated Math 3\nChristopher\n102",
+      "friday": "Integrated Math 3\nChristopher\n102"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Chemistry\nChristopher\n102",
+      "tuesday": "Chemistry\nChristopher\n102",
+      "wednesday": "Chemistry\nChristopher\n102",
+      "thursday": "Chemistry\nChristopher\n102",
+      "friday": "Chemistry\nChristopher\n102"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "English 11\nBurrell\n102",
+      "tuesday": "English 11\nBurrell\n102",
+      "wednesday": "English 11\nBurrell\n102",
+      "thursday": "English 11\nBurrell\n102",
+      "friday": "English 11\nBurrell\n102"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "World History\nBurrell\n102",
+      "tuesday": "World History\nBurrell\n102",
+      "wednesday": "World History\nBurrell\n102",
+      "thursday": "World History\nBurrell\n102",
+      "friday": "World History\nBurrell\n102"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Arevalo Alvarado, Sophia Esmeralda": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Fernandez, Benissa": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Mitcher, Mannice": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Rivera, Zyoneth": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Ortiz Maldonado, Alize Luz": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "tuesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "wednesday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "thursday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103",
+      "friday": "Integrated Math 2\nWright-McCarthy/\nIsham\n103"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ],
+  "Concepcion, Jeyson": [
+    {
+      "time": "\n7:20 - 7:35",
+      "monday": "Homeroom\nBusch\n107A",
+      "tuesday": "Homeroom\nBusch\n107A",
+      "wednesday": "Homeroom\nBusch\n107A",
+      "thursday": "Homeroom\nBusch\n107A",
+      "friday": "Homeroom\nBusch\n107A"
+    },
+    {
+      "time": "7:36 - 8:26",
+      "monday": "English 10\nBusch/Kunze\n107A",
+      "tuesday": "English 10\nBusch/Kunze\n107A",
+      "wednesday": "English 10\nBusch/Kunze\n107A",
+      "thursday": "English 10\nBusch/Kunze\n107A",
+      "friday": "English 10\nBusch/Kunze\n107A"
+    },
+    {
+      "time": "8:27 - 9:17",
+      "monday": "Art\nHauben\n007-008",
+      "tuesday": "PE\nM. Jones\nGym",
+      "wednesday": "PE\nM. Jones\nGym",
+      "thursday": "Technology\nO'Leary\n009",
+      "friday": "Technology\nO'Leary\n009"
+    },
+    {
+      "time": "9:18 - 9:48",
+      "monday": "WIN\nBusch\n107A",
+      "tuesday": "WIN\nBusch\n107A",
+      "wednesday": "WIN\nBusch\n107A",
+      "thursday": "WIN\nBusch\n107A",
+      "friday": "WIN\nBusch\n107A"
+    },
+    {
+      "time": "9:49 - 10:39",
+      "monday": "US History 2\nScott\n104",
+      "tuesday": "US History 2\nScott\n104",
+      "wednesday": "US History 2\nScott\n104",
+      "thursday": "US History 2\nScott\n104",
+      "friday": "US History 2\nScott\n104"
+    },
+    {
+      "time": "10:40 - 11:07",
+      "monday": "Lunch",
+      "tuesday": "Lunch",
+      "wednesday": "Lunch",
+      "thursday": "Lunch",
+      "friday": "Lunch"
+    },
+    {
+      "time": "11:08 - 11:58",
+      "monday": "IM 1 - TBD",
+      "tuesday": "IM 1 - TBD",
+      "wednesday": "IM 1 - TBD",
+      "thursday": "IM 1 - TBD",
+      "friday": "IM 1 - TBD"
+    },
+    {
+      "time": "11:59 - 12:49",
+      "monday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "tuesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "wednesday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "thursday": "Chemistry\nTrofatter/\nPomerenke\n109",
+      "friday": "Chemistry\nTrofatter/\nPomerenke\n109"
+    },
+    {
+      "time": "12:50 - 1:40",
+      "monday": "Spanish 1\nSantiago\n001A",
+      "tuesday": "Spanish 1\nSantiago\n001A",
+      "wednesday": "Spanish 1\nSantiago\n001A",
+      "thursday": "Art\nHauben\n007-008",
+      "friday": "Spanish 1\nSantiago\n001A"
+    },
+    {
+      "time": "1:41 PM \u2013 7:19 AM",
+      "monday": "Home",
+      "tuesday": "Home",
+      "wednesday": "Home",
+      "thursday": "Home",
+      "friday": "Home"
+    }
+  ]
+};
+
+function searchStudent() {
+  const q = document.getElementById('search').value.toLowerCase();
+  let match = Object.keys(data).filter(n => n.toLowerCase().includes(q));
+  if (match.length === 0) {
+    document.getElementById('result').innerHTML = "<p>No match.</p>";
+    return;
+  }
+  const student = match[0];
+  let html = `<h3>${student}</h3><table border='1' cellpadding='5'>
+  <tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>`;
+  data[student].forEach(r => {
+    html += `<tr>
+      <td>${r.time}</td>
+      <td>${r.monday}</td>
+      <td>${r.tuesday}</td>
+      <td>${r.wednesday}</td>
+      <td>${r.thursday}</td>
+      <td>${r.friday}</td>
+    </tr>`;
+  });
+  html += "</table>";
+  document.getElementById('result').innerHTML = html;
+}
+</script>
+
+</body>
+</html>
